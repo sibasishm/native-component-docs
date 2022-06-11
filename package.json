@@ -31,6 +31,7 @@
 		"react": "^18.1.0",
 		"react-dom": "^18.1.0",
 		"react-native": "^0.68.2",
+		"rehype-highlight": "^5.0.2",
 		"remark": "^14.0.2",
 		"remark-emoji": "^3.0.2",
 		"remark-gfm": "^3.0.1",

@@ -12,6 +12,20 @@ export const Container: FC<any> = ({ children, ...customMeta }) => {
 		...customMeta,
 	};
 
+	// <script
+	// 				dangerouslySetInnerHTML={{
+	// 					__html: /* js */ `
+	//               const savedTheme = localStorage.getItem('theme') ?? 'system'
+
+	//               if (savedTheme === 'dark' || (savedTheme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+	//                 document.documentElement.classList.add('dark')
+	//               } else {
+	//                 document.documentElement.classList.remove('dark')
+	//               }
+	//         `,
+	// 				}}
+	// 			/>
+
 	return (
 		<>
 			<Head>

@@ -1,13 +1,8 @@
-import {
-	ComputedFields,
-	defineDocumentType,
-	makeSource,
-} from 'contentlayer/source-files';
+import { ComputedFields, makeSource } from 'contentlayer/source-files';
 import remarkEmoji from 'remark-emoji';
 import remarkGfm from 'remark-gfm';
 import remarkSlug from 'remark-slug';
-import { getTableOfContents } from './src/utils/mdx-utils';
-// import { rehypeMdxCodeMeta } from './src/utils/rehype-code-meta'
+import highlight from 'rehype-highlight';
 
 import { contentDirPath } from './src/contentlayer/utils';
 import * as documentTypes from './src/contentlayer';
@@ -23,7 +18,7 @@ const contentLayerConfig = makeSource({
 	contentDirPath,
 	documentTypes,
 	mdx: {
-		// rehypePlugins: [rehypeMdxCodeMeta],
+		rehypePlugins: [highlight],
 		remarkPlugins: [remarkSlug, remarkGfm, remarkEmoji],
 	},
 });
