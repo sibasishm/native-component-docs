@@ -18,7 +18,7 @@ const computedFields: ComputedFields = {
 
 const Doc = defineDocumentType(() => ({
 	name: 'Doc',
-	filePathPattern: 'docs/**/*.mdx',
+	filePathPattern: '**/*.mdx',
 	contentType: 'mdx',
 	fields: {
 		title: { type: 'string', required: true },
@@ -46,7 +46,7 @@ const Doc = defineDocumentType(() => ({
 }));
 
 const contentLayerConfig = makeSource({
-	contentDirPath: 'pages',
+	contentDirPath: 'docs',
 	documentTypes: [Doc],
 	mdx: {
 		// rehypePlugins: [rehypeMdxCodeMeta],
