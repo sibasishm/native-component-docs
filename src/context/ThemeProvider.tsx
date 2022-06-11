@@ -9,7 +9,7 @@ import {
 } from 'react';
 import { ColorScheme } from 'src/utils/syntax-highlighting';
 
-const ThemeContext = createContext<'light' | 'dark' | 'system'>('dark');
+const ThemeContext = createContext<'light' | 'dark' | 'system'>('system');
 const UpdateThemeContext = createContext<
 	(Theme: 'light' | 'dark' | 'system') => void
 >(() => {});
@@ -23,8 +23,8 @@ export const ThemeProvider: FC<React.PropsWithChildren<{}>> = ({
 	const initalTheme = useMemo(
 		() =>
 			typeof window !== 'undefined'
-				? (localStorage.getItem('theme') as ColorScheme | null) ?? 'dark'
-				: 'dark',
+				? (localStorage.getItem('theme') as ColorScheme | null) ?? 'system'
+				: 'system',
 		[]
 	);
 	const [Theme, setTheme] = useState<'light' | 'dark' | 'system'>(initalTheme);
