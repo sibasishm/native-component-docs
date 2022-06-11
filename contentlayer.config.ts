@@ -46,7 +46,7 @@ const Doc = defineDocumentType(() => ({
 }));
 
 const contentLayerConfig = makeSource({
-	contentDirPath: 'docs',
+	contentDirPath: 'content',
 	documentTypes: [Doc],
 	mdx: {
 		// rehypePlugins: [rehypeMdxCodeMeta],

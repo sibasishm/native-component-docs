@@ -7,9 +7,8 @@ import { useMDXComponent } from 'next-contentlayer/hooks';
 export default function Page({
 	doc,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-	console.log(doc);
 	const Component = useMDXComponent(doc.body.code);
-	return <h1>Hello</h1>;
+	return <h1 className='font-3xl'>Hello</h1>;
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
