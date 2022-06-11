@@ -1,0 +1,19 @@
+{
+  "name": "native-component-docs",
+  "version": "0.0.1",
+  "description": "experiment setup to render RN components using expo and building a doc site with CMS",
+  "main": "index.js",
+  "author": "Sibasish Mohanty",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^17.0.42",
+    "@types/react": "^18.0.12",
+    "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "next": "^12.1.6",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-native": "^0.68.2"
+  }
+}
